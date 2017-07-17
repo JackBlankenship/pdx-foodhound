@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      #restaurants.col-md-12
+        each restaurant in restaurants
+          a.col-md-6(href='/restaurant/' + restaurant.restaurant.id )= restaurant.restaurant.name
+          p.col-md-6= restaurant.restaurant.location.address

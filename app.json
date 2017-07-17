@@ -1,0 +1,7 @@
+{
+  "name": "pdx foodhound on Heroku",
+  "description": "Final project using nodejs and express 4 delivering restaurant data",
+  "repository": "https://github.com/jackblankenship/pdx-foodhound",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

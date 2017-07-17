@@ -1,0 +1,32 @@
+doctype html(lang='en')
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(http-equiv='x-ua-compatible', content='ie=edge')
+  title Foodhound | #{title}
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css', integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd', crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div.site-wrapper
+      // load navbar.jade
+      include navbar
+
+      // content block
+      block content
+
+      // footer
+      p.foot.text-xs-center Main Photography by Olenka Kotyk
+
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous")
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js', integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7', crossorigin='anonymous')
+      //-script(src='/scripts/nearme.js')
+      case pageType
+        when 'search'
+          script(src='/scripts/search.js')
+          script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyADdYIVF14Fu8zuxlUK1amQkDDUKnrEJf8&callback=initMap' async defer)
+        //-when 'restaurant'
+          //-script(src='/scripts/map.js')
+          //-script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyADdYIVF14Fu8zuxlUK1amQkDDUKnrEJf8&callback=initMap' async defer)

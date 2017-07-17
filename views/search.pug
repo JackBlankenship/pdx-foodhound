@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .main.container.clearfix
+    .row
+      p Just enter the name of the city you want to limit the search to.
+      .col-md-12#errors
+      //-if(!user)
+      //-  p Registration allows us to save your favorites.
+    .row
+      .col-md-12
+        div.form-group.col-md-6
+          label.col-sm-2.control-label(for='city') City
+          input.col-sm-9(type='text' name='city' id='city' placeholder='Portland' required)
+          p#searchCity.btn.btn-primary(role='button') Search
+        div.form-group.col-md-6
+    hr.featurette-divider
+    .row
+      div#locations
+      .col-md-6
+        div#filter
+        div#refine
+        div#restaurants
+      .col-md-6#details
+        div#restaurantImage
+        div#restaurantName
+        div#restaurantAddress
+        div#map
+

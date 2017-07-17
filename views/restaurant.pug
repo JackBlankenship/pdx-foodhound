@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6
+        div#restaurantImage
+        div#restaurantName
+          h3= restaurant.name
+        div#restaurantAddress= restaurant.location.address
+        div#cuisines= 'Cuisines ' + restaurant.cuisines
+        div#rating= 'User rating ' + restaurant.user_rating.aggregate_rating
+        div#lat.hidden= restaurant.location.latitude
+        div#lng.hidden= restaurant.location.longitude
+      .col-md-6
+        div#map
